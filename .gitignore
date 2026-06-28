@@ -1,0 +1,40 @@
+# Arduino compiled files
+*.hex
+*.elf
+*.bin
+
+# Build folders
+build/
+dist/
+
+# Arduino IDE temporary files
+*.ino.cpp
+*.ino.cpp.d
+
+# VS Code settings
+.vscode/
+
+# PlatformIO files
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Configuration files containing credentials
+config.h
+secrets.h
+credentials.h
+
+# Backup files
+*.bak
+*.old
