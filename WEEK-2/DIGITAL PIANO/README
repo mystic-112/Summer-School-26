@@ -1,0 +1,25 @@
+# Digital Piano using Arduino
+
+## Objective
+To create a simple digital piano using push buttons and a piezo buzzer.
+
+## Components
+- Arduino UNO
+- 4 Push Buttons
+- Piezo Buzzer
+- Breadboard
+- Jumper Wires
+
+## Connections
+- Buttons connected to D2-D5
+- Buzzer connected to D8
+
+## Working
+Each button corresponds to a musical note. When pressed, the buzzer generates the selected frequency using the `tone()` function.
+
+## Concepts Used
+- Digital Inputs
+- Arrays
+- Functions
+- Buzzer Control
+- Serial Communication
