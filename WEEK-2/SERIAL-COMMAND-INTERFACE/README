@@ -1,0 +1,25 @@
+# Serial Command Interface
+
+## Objective
+Control LEDs using commands entered through the Serial Monitor.
+
+## Components
+- Arduino UNO
+- 2 LEDs
+- 2 Resistors
+- Breadboard
+
+## Supported Commands
+- RED ON
+- RED OFF
+- GREEN ON
+- GREEN OFF
+- ALL OFF
+- STATUS
+- HELP
+
+## Concepts Used
+- Serial Communication
+- String Processing
+- Conditional Statements
+- Human Machine Interface
