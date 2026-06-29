@@ -1,0 +1,24 @@
+# Ultrasonic Parking Sensor
+
+## Objective
+Build a parking assistance system using an HC-SR04 ultrasonic sensor.
+
+## Components
+- Arduino UNO
+- HC-SR04
+- LEDs
+- Buzzer
+
+## Working Principle
+The ultrasonic sensor measures distance using sound waves.
+
+Depending on the measured distance:
+- Green LED indicates safe distance.
+- Yellow LED indicates caution.
+- Red LED and buzzer indicate immediate obstacle proximity.
+
+## Concepts Used
+- Ultrasonic sensing
+- Pulse timing
+- Conditional logic
+- Embedded alert systems
