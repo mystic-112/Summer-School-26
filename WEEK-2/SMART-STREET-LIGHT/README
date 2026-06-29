@@ -1,0 +1,135 @@
+# Smart Street Light System
+
+## Objective
+
+To design an energy-efficient smart street lighting system that automatically adjusts brightness based on ambient light conditions and human/vehicle movement.
+
+## Problem Statement
+
+Traditional street lights remain fully ON throughout the night, leading to unnecessary power consumption during periods of low activity.
+
+This project addresses this issue by using an LDR to detect day/night conditions and a PIR sensor to detect motion, thereby adjusting light intensity dynamically.
+
+## Components Used
+
+* Arduino UNO
+* LDR (Light Dependent Resistor)
+* PIR Motion Sensor
+* LED
+* 10kΩ Resistor
+* 220Ω Resistor
+* Breadboard
+* Jumper Wires
+
+## Connections
+
+### LDR Circuit
+
+| Component      | Connection           |
+| -------------- | -------------------- |
+| LDR Terminal 1 | 5V                   |
+| LDR Terminal 2 | A0 and 10kΩ resistor |
+| 10kΩ resistor  | GND                  |
+
+### PIR Sensor
+
+| PIR Pin | Arduino Pin |
+| ------- | ----------- |
+| VCC     | 5V          |
+| OUT     | D2          |
+| GND     | GND         |
+
+### Street Light LED
+
+| Component       | Arduino Pin               |
+| --------------- | ------------------------- |
+| LED Anode (+)   | D9                        |
+| LED Cathode (-) | GND through 220Ω resistor |
+
+## Working Principle
+
+The system operates in three modes:
+
+### 1. Daytime Mode
+
+When sufficient ambient light is detected by the LDR, the street light remains OFF.
+
+```text
+Condition:
+LDR Value > Threshold
+```
+
+Output:
+
+* Street light OFF
+
+---
+
+### 2. Night Mode (No Motion)
+
+When it is dark and no motion is detected, the LED glows at reduced brightness using PWM.
+
+Output:
+
+* Street light DIM (~30% brightness)
+
+---
+
+### 3. Night Mode (Motion Detected)
+
+When motion is detected during nighttime, the LED switches to full brightness.
+
+Output:
+
+* Street light at 100% brightness
+
+## PWM Brightness Levels
+
+| Condition         | PWM Value | Brightness      |
+| ----------------- | --------- | --------------- |
+| Daytime           | 0         | OFF             |
+| Night + No Motion | 80        | Dim             |
+| Night + Motion    | 255       | Full Brightness |
+
+## Serial Monitor Output Example
+
+```text
+LDR Value: 850 Motion: 0
+DAYTIME -> LIGHT OFF
+
+LDR Value: 320 Motion: 0
+NIGHT + NO MOTION -> DIM MODE
+
+LDR Value: 280 Motion: 1
+NIGHT + MOTION -> FULL BRIGHTNESS
+```
+
+## Concepts Demonstrated
+
+* Analog Sensor Reading
+* Digital Sensor Reading
+* PWM Brightness Control
+* Energy Efficient Automation
+* Conditional Logic
+* Smart City Applications
+
+## Applications
+
+* Smart Cities
+* Highway Lighting
+* Parking Lots
+* Residential Streets
+* Campus Roadways
+
+## Future Improvements
+
+* IoT dashboard integration using ESP32
+* Cloud-based monitoring
+* Adaptive brightness control based on traffic density
+* Solar-powered implementation
+
+## Author
+
+**Abhishek Tandon**
+IoT, Robotics and Drones Summer School 2026
+VJTI Mumbai
